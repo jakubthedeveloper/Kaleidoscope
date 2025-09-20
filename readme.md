@@ -37,7 +37,7 @@ pip install pygame
 pip install opencv-python python-dotenv
 ```
 
-📁 Folders & Files
+## 📁 Folders & Files
 ```bash
 .
 ├─ kaleidoscope.py           # images version
@@ -49,15 +49,15 @@ pip install opencv-python python-dotenv
 └─ README.md                 # this file
 ```
 
-⚙️ Configuration
-## Images version (kaleidoscope.py)
+## ⚙️ Configuration
+### Images version (kaleidoscope.py)
 Drop your images into ./images/.
 
 Supported: .png .jpg .jpeg .bmp .gif .webp
 
 Snapshots go to ./snapshots/ as snap_YYYYMMDD_HHMMSS.png.
 
-## RTSP version (kaleidoscope_rtsp.py)
+### RTSP version (kaleidoscope_rtsp.py)
 Format of the .env file:
 
 ```dotenv
@@ -79,7 +79,7 @@ RTSP_URL_1=rtsp://user:pass@192.168.0.10:554/stream1
 RTSP_URL_2=rtsp://user:pass@192.168.0.11:554/stream2
 ```
 
-▶️ Run
+## ▶️ Run
 ```bash
 # Images variant
 python kaleidoscope.py
@@ -90,7 +90,7 @@ python kaleidoscope_rtsp.py
 
 On launch you’ll see a splash screen with controls. Press any key to start.
 
-🎛️ Controls
+## 🎛️ Controls
 
 | Key         | Action                               |
 | ----------- | ------------------------------------ |
@@ -103,16 +103,19 @@ On launch you’ll see a splash screen with controls. Press any key to start.
 | P           | snapshot                             |
 | ESC, Q      | quit                                 |
 
-🔧 Tips
+## 🔧 Tips
 Fewer SLICES ⇒ faster rendering.
 
 RTSP: ensure FFmpeg support in OpenCV; test URLs with VLC/ffplay.
 
-📄 License
+## 📄 License
+
 MIT
 
-🙌 Credits
+## 🙌 Credits
+
 Built with Pygame and OpenCV. FFmpeg powers RTSP decoding.
 
 🥷🏻Author
+
 Jakub Krysakowski
