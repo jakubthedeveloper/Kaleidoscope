@@ -298,6 +298,8 @@ splash_screen([
     "P — save snapshot (PNG)",
     "F — toggle fullscreen",
     "Any key/mouse — start",
+    "",
+    "Author: Jakub Krysakowski"
 ])
 
 # =========================

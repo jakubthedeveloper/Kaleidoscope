@@ -9,7 +9,7 @@ WIDTH, HEIGHT = 900, 700
 BG_COLOR = (14, 16, 20)
 IMAGES_DIR = "images"
 SLICES = 14
-SPEED_DEG_PER_SEC = 34.0
+SPEED_DEG_PER_SEC = 14.0
 FADE_ALPHA = 15  # trail fade strength (0–255), higher = shorter trail
 
 pygame.init()
@@ -108,6 +108,8 @@ def splash_screen():
         "P — save snapshot",
         "F — toggle fullscreen",
         "Any key/mouse — start",
+        "",
+        "Author: Jakub Krysakowski"
     ]
     while True:
         for event in pygame.event.get():
