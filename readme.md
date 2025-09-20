@@ -1,6 +1,6 @@
 # Pygame Kaleidoscope — two flavors: Images & RTSP
 
-Mirror any source into a kaleidoscopic swirl of triangular slices with optional smooth trails, fullscreen, and snapshots.
+Read images from files or a stream from your camera and make eye-candy Kaleidoscope effect.
 
 ---
 
@@ -15,7 +15,8 @@ Mirror any source into a kaleidoscopic swirl of triangular slices with optional 
 - Reads **one or more** RTSP camera streams
 - Sources are defined in `.env` as numbered keys:  
   `RTSP_URL_1=...`, `RTSP_URL_2=...`, etc.
-- Also supports trails, fullscreen, and snapshots (timestamped)
+- Full screen mode
+- Snapshot to png files
 
 ---
 
@@ -49,15 +50,15 @@ pip install opencv-python python-dotenv
 ```
 
 ⚙️ Configuration
-Images version (kaleidoscope.py)
+## Images version (kaleidoscope.py)
 Drop your images into ./images/.
 
 Supported: .png .jpg .jpeg .bmp .gif .webp
 
 Snapshots go to ./snapshots/ as snap_YYYYMMDD_HHMMSS.png.
 
-RTSP version (kaleidoscope_rtsp.py)
-Only this .env format is supported:
+## RTSP version (kaleidoscope_rtsp.py)
+Format of the .env file:
 
 ```dotenv
 RTSP_URL_1=rtsp://login:password@ip_or_host.one/path
@@ -89,43 +90,29 @@ python kaleidoscope_rtsp.py
 
 On launch you’ll see a splash screen with controls. Press any key to start.
 
-🎛️ Controls (both versions)
-ENTER — switch to next camera (RTSP version)
+🎛️ Controls
 
-SPACE — switch to next image (images version)
-
-A — pause / resume rotation
-
-↑ / ↓ — change slices (±2)
-
-→ / ← or + / - — change rotation speed
-
-F — toggle fullscreen
-
-P — save snapshot PNG (timestamped)
-
-ESC or Q — quit
-
-🧠 How it works (quick)
-A wedge mask (360° / SLICES) carves a triangular slice.
-
-Each slice is rotated around the center; odd slices mirror for symmetry.
-
-A circle mask clips the final output.
-
-Optional trails: a semi-transparent layer fades prior frames for smooth afterglow.
+| Key         | Action                               |
+| ----------- | ------------------------------------ |
+| ENTER       | switch to next camera (RTSP version) |
+| SPACE       | next image or stream                 |
+| A           | pause, resume                        |
+| up, down    | slices                               |
+| left, right | speed                                |
+| F           | full screen                          |
+| P           | snapshot                             |
+| ESC, Q      | quit                                 |
 
 🔧 Tips
 Fewer SLICES ⇒ faster rendering.
 
 RTSP: ensure FFmpeg support in OpenCV; test URLs with VLC/ffplay.
 
-Longer trails: lower TRAIL_FADE_ALPHA (heavier overdraw).
-
 📄 License
-MIT (or your preferred license).
+MIT
 
 🙌 Credits
 Built with Pygame and OpenCV. FFmpeg powers RTSP decoding.
 
-
+🥷🏻Author
+Jakub Krysakowski
