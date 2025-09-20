@@ -116,6 +116,6 @@ MIT
 
 Built with Pygame and OpenCV. FFmpeg powers RTSP decoding.
 
-🥷🏻Author
+## 🥷🏻Author
 
 Jakub Krysakowski
