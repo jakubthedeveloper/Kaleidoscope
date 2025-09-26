@@ -1,5 +1,7 @@
 # Pygame Kaleidoscope — two flavors: Images & RTSP
 
+https://irok84.itch.io/kaleidoscope-projection
+
 Read images from files or a stream from your camera and make eye-candy Kaleidoscope effect.
 
 ---
